@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 
 /**
  * main - Print the size of many variable types
