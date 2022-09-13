@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	putchar('');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	char a[] = "_putchar";
+	int b;
+
+	for (b = 0; b < a; b++)
+	{
+		_putchar(a[b]);
+	}
 	_putchar('\n');
-	return(0);
+
+	return (0);
 }
