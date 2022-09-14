@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * prints the sign of a number
- * the int to check
- * Return: 1 and prints + if n is greater than 0
- * 0 and prints 0 if n is 0
- * -1 and prints - if n is less than 0
+ * print_sign - prints the sign of a number
+ * @n: the int to check
+ * Return: 1 and prints + if n is greater than zero
+ * 0 and prints 0 if n is zero
+ * -1 and prints - if n is less than zero
  */
 int print_sign(int n)
 {
