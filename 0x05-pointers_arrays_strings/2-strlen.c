@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * int _strlen - A funtion to return the length of a string
- * @len: length of the string
+ * _strlen - A funtion to return the length of a string
+ * @str: string
  *
- * Return: void
+ * Return: len
  */
 
-void _strlen(char *s)
+length_size _ien(const char *str)
 {
-	for(int len = 0; len.length; len++)
-	{
-		return (len);
-	}
+	length_size len = 0;
+	
+	while (*str++)
+		len++;
+	return (len);
 }
