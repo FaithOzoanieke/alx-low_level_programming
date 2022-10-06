@@ -1,19 +1,19 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * malloc_checked - allocates memory using malloc
- * @uju: function int parameter
- * Return: void
+ * *malloc_checked - allocates memory using malloc
+ * @z: number of bytes to allocate
+ *
+ * Return: a pointer to the allocated memory
  */
 
-void *malloc_checked(unsigned int uju)
+void *malloc_checked(unsigned int z)
 {
-	void *o = malloc(uju);
+	void *ptr;
 
-	if (o == NULL)
-	{
+	ptr = malloc(z);
+	if (ptr == NULL)
 		exit(98);
-	}
-	return (c);
+	return (ptr);
 }
