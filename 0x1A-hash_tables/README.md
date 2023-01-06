@@ -1,7 +1,7 @@
 x1A. C - Hash tables
 ====================
 
--   By Julien Barbier
+-   By Faith Ujunwa
 -   Weight: 1
 
 
@@ -111,7 +111,7 @@ Write a function that creates a hash table.
 -   If something went wrong, your function should return `NULL`
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 0-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 0-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -130,10 +130,10 @@ int main(void)
     printf("%p\n", (void *)ht);
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-hash_table_create.c -o a
-julien@ubuntu:~/0x1A. Hash tables$ ./a
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-hash_table_create.c -o a
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ ./a
 0x238a010
-julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 ==7602== Memcheck, a memory error detector
 ==7602== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==7602== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
@@ -155,7 +155,7 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./a
 ==7602==
 ==7602== For counts of detected and suppressed errors, rerun with: -v
 ==7602== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -179,7 +179,7 @@ Write a hash function implementing the djb2 algorithm.
 -   You are allowed to copy and paste the function from [this page](https://alx-intranet.hbtn.io/rltoken/3B7lCUBD4yZh66Pbl2KcEQ "this page")
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c
 unsigned long int hash_djb2(const unsigned char *str)
 {
     unsigned long int hash;
@@ -192,8 +192,8 @@ unsigned long int hash_djb2(const unsigned char *str)
     }
     return (hash);
 }
-julien@ubuntu:~/0x1A. Hash tables$
-julien@ubuntu:~/0x1A. Hash tables$ cat 1-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 1-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -216,12 +216,12 @@ int main(void)
     printf("%lu\n", hash_djb2((unsigned char *)s));
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-djb2.c -o b
-julien@ubuntu:~/0x1A. Hash tables$ ./b
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-djb2.c -o 
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ ./b
 6953392314605
 3749890792216096085
 5861846
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -249,7 +249,7 @@ Write a function that gives you the index of a key.
 -   You will have to use this hash function for all the next tasks
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 2-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 2-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -277,15 +277,15 @@ int main(void)
     printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 1-djb2.c 2-key_index.c -o c
-julien@ubuntu:~/0x1A. Hash tables$ ./c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 1-djb2.c 2-key_index.c -o c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ ./c
 6953392314605
 237
 3749890792216096085
 341
 5861846
 470
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -313,7 +313,7 @@ Write a function that adds an element to the hash table.
 -   In case of collision, add the new node at the beginning of the list
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 3-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 3-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -332,8 +332,8 @@ int main(void)
     hash_table_set(ht, "betty", "cool");
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c -o d
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c -o d
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -369,7 +369,7 @@ Write a function that retrieves a value associated with a key.
 -   Returns the value associated with the element, or `NULL` if `key` couldn't be found
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 4-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 4-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -413,8 +413,8 @@ int main(void)
     printf("%s:%s\n", "javascript", value);
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c -o e
-julien@ubuntu:~/0x1A. Hash tables$ ./e
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c -o e
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ ./e
 python:awesome
 Bob:and Kris love asm
 N:queens
@@ -423,7 +423,7 @@ Betty:Cool
 98:Battery Street
 c:isfun
 javascript:(null)
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -451,7 +451,7 @@ Write a function that prints a hash table.
 -   If `ht` is NULL, don't print anything
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 5-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 5-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -478,11 +478,11 @@ int main(void)
     hash_table_print(ht);
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c -o f
-julien@ubuntu:~/0x1A. Hash tables$ ./f
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c -o f
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ ./f
 {}
 {'Betty': 'Cool', 'python': 'awesome', 'Bob': 'and Kris love asm', '98': 'Battery Street', 'N': 'queens', 'c': 'fun', 'Asterix': 'Obelix'}
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -506,7 +506,7 @@ Write a function that deletes a hash table.
     -   where `ht` is the hash table
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 6-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 6-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -547,8 +547,8 @@ int main(void)
     hash_table_delete(ht);
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c 6-hash_table_delete.c -o g
-julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra 6-main.c 0-hash_table_create.c 1-djb2.c 2-key_index.c 3-hash_table_set.c 4-hash_table_get.c 5-hash_table_print.c 6-hash_table_delete.c -o g
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ valgrind ./g
 ==6621== Memcheck, a memory error detector
 ==6621== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
 ==6621== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
@@ -564,7 +564,7 @@ julien@ubuntu:~/0x1A. Hash tables$ valgrind ./g
 ==6621==
 ==6621== For counts of detected and suppressed errors, rerun with: -v
 ==6621== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```
 
@@ -647,7 +647,7 @@ Rewrite the previous functions using these data structures:
 -   You are allowed to have more than 5 functions in your file
 
 ```
-julien@ubuntu:~/0x1A. Hash tables$ cat 100-main.c
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ cat 100-main.c
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -683,8 +683,8 @@ int main(void)
         shash_table_delete(ht);
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-sorted_hash_table.c 1-djb2.c 2-key_index.c -o sht
-julien@ubuntu:~/0x1A. Hash tables$ ./sht
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-sorted_hash_table.c 1-djb2.c 2-key_index.c -o sht
+faithozoanieke@ubuntu:~/0x1A. Hash tables$ ./sht
 {'y': '0'}
 {'j': '1', 'y': '0'}
 {'c': '2', 'j': '1', 'y': '0'}
@@ -694,7 +694,7 @@ julien@ubuntu:~/0x1A. Hash tables$ ./sht
 {'a': '6', 'b': '3', 'c': '2', 'j': '1', 'n': '5', 'y': '0', 'z': '4'}
 {'a': '6', 'b': '3', 'c': '2', 'j': '1', 'm': '7', 'n': '5', 'y': '0', 'z': '4'}
 {'z': '4', 'y': '0', 'n': '5', 'm': '7', 'j': '1', 'c': '2', 'b': '3', 'a': '6'}
-julien@ubuntu:~/0x1A. Hash tables$
+faithozoanieke@ubuntu:~/0x1A. Hash tables$
 
 ```\
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/253/php.png)
