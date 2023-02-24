@@ -1,4 +1,4 @@
-# 0x1C Makefile
+# 0x1C Makefile by Faith
 
 ## Description
 Getting to know the makefile
