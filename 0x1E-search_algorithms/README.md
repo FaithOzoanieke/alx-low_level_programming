@@ -1,4 +1,4 @@
-# 0x1E. C - Search Algorithms by Faith Ujunwa
+# 0x1E. C - Search Algorithms by Faith Ujunwa Ozo
 
 ## Resources:books:
 Read or watch:
